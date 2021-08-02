@@ -415,7 +415,7 @@ header #logo p {
 
 #recomendacoes {
   background-image: url("img/secao_alerta.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: cover;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -424,7 +424,7 @@ header #logo p {
   margin-bottom: -70px;
   display: block;
   overflow: hidden;
-  min-width: 100%;
+  width: 100%;
 }
 
 #recomendacoes p {

@@ -424,6 +424,7 @@ header #logo p {
   margin-bottom: -70px;
   display: block;
   overflow: hidden;
+  width: 100%;
 }
 
 #recomendacoes p {
@@ -1159,4 +1160,3 @@ footer .div-btts .link-btts {
     transform: translate3d(0, 0, 0);
   }
 }
-

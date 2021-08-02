@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    background: rgb(222, 224, 218);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  section {
+    padding: calc((100% - 1050px) / 2);
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  #section-novidades {
+    background: url('detalhe_novidades2.svg'), url('detalhe_novidades2.svg'), url('secao.svg');
+    background-repeat: no-repeat;
+    background-size: 300px, 300px, cover;
+    background-position: 5% 103%, right top, center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+  }
+
+  :is(.subtitulo-section, .titulo-section) {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    font-family: 'Patrick Hand', cursive;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+
+  }
+
+  .titulo-section {
+    font-size: 42px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+  }
+
+  .subtitulo-section {
+    opacity: 90%;
+    position: relative;
+  }
+
+  .subtitulo-section::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -7px;
+    height: 2px;
+    width: 100%;
+  }
+
+  #section-novidades article {
+    width: 270px;
+    padding: 19px 13px;
+    border: 2px solid #d7eb5a;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  #section-novidades article h3 {
+    color: #ffffff;
+    font-family: "Catamaran";
+    font-size: 24px;
+    line-height: 1.;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-top: 0
+  }
+
+  #section-novidades article p {
+    color: #d7eb5a;
+    font-family: "Catamaran";
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .btts-seta {
+    padding: 10px 12px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
+    background: #f5c81d;
+    line-height: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: absolute;
+  }
+
+  #section-novidades .btts-seta {
+    right: 13px;
+    top: 19px;
+  }
+
+  .btts-seta a {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    color: #1e1c18;
+    text-align: center;
+    font-family: "Patrick Hand";
+    font-weight: 400;
+    font-size: 20px;
+    animation: seta 0.5s ease-out 0s infinite alternate;
+    animation-fill-mode: forwards
+  }
+
+  .btts-seta::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: transform 0.5s ease-out;
+    z-index: 1;
+  }
+
+  .btts-seta:hover::before {
+    content: "";
+    transform: scale(15);
+    background-color: #f1720c;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  @keyframes seta {
+    from {
+      left: -3px;
+    }
+
+    to {
+      left: 3px
+    }
+  }
+</style>
+
+<body>
+
+  <section id="section-novidades">
+    <p class="subtitulo-section">O que ha de novo no zoo?</p>
+    <h2 class="titulo-section">Novidades</h2>
+
+    <article>
+      <h3>Lorem ipsum</h3>
+      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+      <div class="btts-seta"><a href="">⇢</a></div>
+    </article>
+
+    <article>
+      <h3>Lorem ipsum</h3>
+      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+      <div class="btts-seta"><a href="">⇢</a></div>
+    </article>
+
+    <article>
+      <h3>Lorem ipsum</h3>
+      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+      <div class="btts-seta"><a href="">⇢</a></div>
+    </article>
+
+  </section>
+
+</body>
+
+</html>

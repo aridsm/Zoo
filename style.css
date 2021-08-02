@@ -1,0 +1,1162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: calc((100% - 1050px) / 2);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/** botoes **/
+
+.div-btts {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 220, 80) 0%,
+    rgb(237, 189, 9) 25%,
+    rgb(231, 180, 13) 80%,
+    rgb(207, 152, 41) 95%
+  );
+  height: 60px;
+  width: 300px;
+  box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.29);
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.div-btts .link-btts {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  color: #2c311e;
+}
+
+.div-btts::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: transform 0.8s ease-out;
+  z-index: 1;
+}
+
+.div-btts:hover::before {
+  content: "";
+  transform: scale(50);
+  background: #f1720c;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.div-btts:active {
+  top: 5px;
+  border: 3px solid #a83225;
+  background-color: #f1720c;
+}
+
+/** header **/
+
+header {
+  background-image: url("img/secao_header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: calc((100% - 1050px) / 2);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "logo headerup"
+    "logo headerdown";
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 50;
+}
+
+header #logo img {
+  width: 60px;
+}
+
+header #logo {
+  text-align: center;
+  justify-self: start;
+  grid-area: logo;
+}
+
+header #logo p {
+  font-family: "Love Ya Like A Sister";
+  font-size: 30px;
+  color: #f1ebe8;
+}
+
+#header-up {
+  display: flex;
+  align-items: center;
+  grid-area: headerup;
+  border-bottom: 2px solid #6b311b;
+  padding-bottom: 15px;
+}
+
+#header-up span {
+  color: #f1ebe8;
+  font-family: "Assistant", sans-serif;
+  font-size: 16px;
+}
+
+#header-up span::before {
+  content: url("img/tel.svg");
+  margin-right: 10px;
+}
+
+#header-up .div-btts {
+  width: 180px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+#header-up form {
+  display: flex;
+  margin-left: auto;
+}
+
+#header-up form label {
+  position: absolute;
+  visibility: hidden;
+}
+
+#header-up #pesquisar {
+  width: 200px;
+  height: 30px;
+  background: #ffffff;
+  color: #2c311e;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  padding-left: 5px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#header-up form .link-seta {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  text-transform: inherit;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  line-height: 1;
+  display: block;
+  width: 30px;
+  top: 0px;
+}
+
+#header-up form .btts-seta {
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+}
+
+#header-down {
+  font-family: "Assistant", sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#header-down ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#header-down ul li {
+  position: relative;
+}
+
+#header-down ul li .item-menu {
+  color: #f1ebe8;
+  text-align: center;
+  position: relative;
+  display: block;
+  width: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#header-down ul li .item-menu::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 0px;
+  height: 50px;
+  border-radius: 16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+#header-down ul li .item-menu:hover::before {
+  background: #cf4c18;
+  width: 100%;
+  margin: 0 auto;
+  transform: scaleX(1.2);
+}
+
+#header-down .menu {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Love Ya Like A Sister";
+  text-transform: uppercase;
+}
+
+#header-down .descricao-menu {
+  font-size: 12px;
+  font-family: "Assistant", sans-serif;
+}
+
+#header-down .menu-opcoes {
+  position: absolute;
+  background: #8a2318;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  padding: 20px;
+  font-family: "Assistant", sans-serif;
+  margin-top: 10px;
+}
+
+#header-down .menu-opcoes ul {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-gap: 40px;
+}
+
+#header-down .menu-opcoes ul li {
+  width: 150px;
+}
+
+#header-down .menu-opcoes ul li a {
+  color: #f1ebe8;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: auto;
+}
+
+.menu-opcoes ul li a::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-atividades ul li:nth-of-type(1) a::before {
+  background-image: url("img/atracao1.png");
+}
+
+.menu-atividades ul li:nth-of-type(2) a::before {
+  background-image: url("img/atracao2.png");
+}
+
+.menu-atividades ul li:nth-of-type(3) a::before {
+  background-image: url("img/atracao3.png");
+}
+
+.menu-atividades ul li:nth-of-type(4) a::before {
+  background-image: url("img/atracao4.png");
+}
+
+.menu-atividades ul li:nth-of-type(5) a::before {
+  background-image: url("img/atracao5.png");
+}
+
+.menu-atividades ul li:nth-of-type(6) a::before {
+  background-image: url("img/atracao6.png");
+}
+
+.menu-visita ul li:nth-of-type(1) a::before {
+  background-image: url("img/visita1.png");
+}
+
+.menu-visita ul li:nth-of-type(2) a::before {
+  background-image: url("img/visita2.png");
+}
+
+.menu-visita ul li:nth-of-type(3) a::before {
+  background-image: url("img/visita3.png");
+}
+
+.menu-visita ul li:nth-of-type(4) a::before {
+  background-image: url("img/visita4.png");
+}
+
+.menu-opcoes ul li a::after {
+  content: "";
+  position: absolute;
+  background: #751c12;
+  width: 0;
+  height: 40px;
+  border-radius: 16px;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.menu-opcoes ul li a:hover::after {
+  width: 100%;
+  transform: scaleX(1.2);
+  transform: scaleY(1.4);
+}
+
+/** principal **/
+
+#section-principal img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+#section-principal .imgs-principal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#section-principal {
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 16;
+  margin-bottom: -70px;
+  display: block;
+  overflow: hidden;
+}
+
+#section-principal #conteudo {
+  padding: calc((100% - 1050px) / 2);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#section-principal #conteudo h1 {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.69);
+  width: 300px;
+  color: #f7f6f6;
+  font-family: "Love Ya Like A Sister";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.3;
+  text-align: left;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#section-principal .div-btts + .div-btts {
+  margin-top: 20px;
+}
+
+/** recomendacoes **/
+
+#recomendacoes {
+  background-image: url("img/secao_alerta.svg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 16;
+  margin-bottom: -70px;
+  display: block;
+  overflow: hidden;
+}
+
+#recomendacoes p {
+  color: #2c311e;
+  font-family: "Assistant", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  animation: alerta 30s linear 0s infinite normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes alerta {
+  from {
+    left: -620px;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/** atividades **/
+#section-atividades {
+  display: grid;
+  grid-template-columns: 415px 415px;
+  align-items: center;
+  position: relative;
+  bottom: -40px;
+  z-index: 2;
+  background: #8ba81c;
+  background-image: url("img/detalhe_atividades.svg");
+  background-repeat: no-repeat;
+  background-size: 450px;
+  background-position: 109% 2%;
+  padding-bottom: 120px;
+  bottom: -50px;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+#section-atividades .titulo-section {
+  margin-top: -15px;
+}
+
+.card-atividade {
+  display: flex;
+  align-items: center;
+  background-color: #dff164;
+  width: 100%;
+  box-shadow: -1px 8px 9px rgba(0, 0, 0, 0.11);
+  color: #8ba81c;
+  font-family: "Love Ya Like A Sister", cursive;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: right;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-atividade::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 300%;
+  background-color: transparent;
+  right: -50px;
+  bottom: 15px;
+  transform: rotate(50deg);
+  transform-origin: -150px;
+  transition: width 0.5s ease-out;
+}
+
+.card-atividade:hover::before {
+  background-color: #f5c81d;
+  width: 250px;
+}
+
+.card-atividade:active {
+  top: 5px;
+}
+
+.card-atividade h3 {
+  margin-left: auto;
+  padding-right: 20px;
+  z-index: 2;
+}
+
+.card-atividade img {
+  width: 250px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  position: relative;
+  z-index: 1;
+}
+/** promos **/
+
+#section-promos {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: url("img/detalhe_promos.svg"), url("img/secao_promos.svg");
+  background-repeat: no-repeat;
+  background-size: 175px, cover;
+  background-position: 50%, center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  bottom: -40px;
+  z-index: 2;
+}
+
+#section-promos label {
+  position: absolute;
+  visibility: hidden;
+}
+
+#section-promos .titulo-section {
+  color: #f5c81d;
+  grid-column: 1;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#section-promos form {
+  grid-column: 2;
+  margin: 0;
+  display: flex;
+  justify-self: end;
+}
+
+#section-promos form #email-promo {
+  width: 300px;
+  height: 50px;
+  background: #ffffff;
+  color: #2c311e;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+  padding-left: 5px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#section-promos form .link-seta {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+#section-promos form .btts-seta {
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+}
+/** eventos **/
+
+#section-eventos {
+  background: #f1ebe8;
+  background-image: url("img/detalhe_eventos.svg"),
+    url("img/detalhe_eventos.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: 95%, 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  padding-bottom: 120px;
+  bottom: -20px;
+}
+
+#section-eventos :is(.subtitulo-section, .titulo-section) {
+  color: #2c311e;
+}
+
+#section-eventos .subtitulo-section::after {
+  background-color: #2c311e;
+}
+
+:is(.subtitulo-section, .titulo-section) {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  font-family: "Love Ya Like A Sister", cursive;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.card-evento {
+  position: relative;
+  width: 320px;
+  justify-self: center;
+}
+
+.card-evento h3 {
+  color: #2c311e;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-evento p {
+  width: 300px;
+  height: 140px;
+  padding: 8px 8px 8px 15px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
+  background: #ffffff;
+  color: #2c311e;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+}
+
+.card-evento .btts-seta {
+  bottom: 10px;
+  right: 20px;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.card-evento img {
+  width: 340px;
+  display: block;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
+}
+/** novidades **/
+
+#section-novidades {
+  background: url("img/detalhe_novidades2.svg"),
+    url("img/detalhe_novidades2_inverse.svg"), url("img/secao.svg");
+  background-repeat: no-repeat;
+  background-size: 300px, 300px, cover;
+  background-position: 5% 103%, 95% -3%, center;
+  display: grid;
+  grid-template-columns: repeat(3, 290px);
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+:is(.subtitulo-section, .titulo-section) {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  font-family: "Love Ya Like A Sister", cursive;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.titulo-section {
+  font-size: 42px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.subtitulo-section {
+  opacity: 90%;
+  position: relative;
+  font-size: 18px;
+}
+
+.subtitulo-section::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -7px;
+  height: 2px;
+  width: 100%;
+}
+
+#section-novidades article {
+  width: 100%;
+  padding: 19px 13px;
+  border: 2px solid #d7eb5a;
+  border-radius: 16px;
+  position: relative;
+}
+
+#section-novidades article h3 {
+  color: #ffffff;
+  font-family: "Assistant";
+  font-size: 24px;
+  line-height: 1;
+  text-align: left;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#section-novidades article p {
+  color: #d7eb5a;
+  font-family: "Assistant";
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.btts-seta {
+  padding: 10px 12px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 220, 80) 0%,
+    rgb(237, 189, 9) 25%,
+    rgb(231, 180, 13) 80%,
+    rgb(207, 152, 41) 95%
+  );
+  line-height: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+}
+
+#section-novidades .btts-seta {
+  right: 13px;
+  top: 19px;
+}
+
+.btts-seta .link-seta {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  color: #85640b;
+  text-align: center;
+  font-family: "Love Ya Like A Sister";
+  font-weight: 400;
+  font-size: 18px;
+  animation: seta 0.5s ease-out 0s infinite alternate;
+  animation-fill-mode: forwards;
+  line-height: 1;
+  top: 2px;
+}
+
+.btts-seta::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: transform 0.5s ease-out;
+  z-index: 1;
+}
+
+.btts-seta:hover::before {
+  content: "";
+  transform: scale(15);
+  background-color: #f1720c;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@keyframes seta {
+  from {
+    left: -3px;
+  }
+
+  to {
+    left: 3px;
+  }
+}
+
+/** sobre **/
+
+#section-sobre .titulo-section {
+  grid-column: 1;
+  margin-left: 0;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#section-sobre {
+  background: #a83225;
+  background-image: url("img/sobre.svg");
+  background-size: 900px;
+  background-repeat: repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  padding-top: 120px;
+  top: -20px;
+  align-items: stretch;
+}
+
+#section-sobre p {
+  grid-column: 1;
+  padding: 20px 40px 20px 0px;
+  color: #ffffff;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#section-sobre .div-btts {
+  grid-column: 1;
+  width: 200px;
+}
+
+#section-sobre img {
+  grid-row: 1 / 4;
+  width: 650px;
+  display: block;
+  max-width: 100%;
+  justify-self: right;
+  position: absolute;
+  top: -120px;
+}
+
+/** contato **/
+
+#section-contato {
+  background-image: url("img/detalhe_contato.svg"), url("img/secao_contato.svg");
+  background-repeat: no-repeat;
+  background-size: 300px, cover;
+  background-position: 105% 100%, center;
+  display: grid;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 140px;
+  top: -50px;
+}
+
+#section-contato :is(.subtitulo-section, .titulo-section) {
+  color: #a83225;
+}
+
+#section-contato .subtitulo-section::after {
+  background: #a83225;
+}
+
+#section-contato form {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 30px;
+  margin: 0 auto;
+}
+
+#section-contato form label {
+  position: absolute;
+  visibility: hidden;
+}
+
+#titulo {
+  grid-column: 1 / -1;
+}
+
+#mensagem {
+  grid-column: 1 / -1;
+}
+
+#section-contato input:not(#enviar-mensagem) {
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  height: 40px;
+  padding-left: 5px;
+  color: #2c311e;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+  background-color: transparent;
+  border-bottom: 2px solid #a83225;
+}
+
+#section-contato input::placeholder {
+  color: #cc531b9f;
+}
+
+#section-contato textarea {
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  height: 180px;
+  padding: 5px;
+  padding-top: 10px;
+  color: #2c311e;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+  background-color: transparent;
+  border: 2px solid #a83225;
+}
+
+#section-contato textarea::placeholder {
+  color: #cc531b9f;
+}
+
+#enviar-mensagem {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+#section-contato .div-btts {
+  width: 260px;
+  grid-column: 3;
+}
+
+/** footer **/
+
+footer {
+  background-image: url("img/secao_footer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+  padding: calc((100% - 1050px) / 2);
+  padding-top: 50px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "visita atividades mapa endereco"
+    "visita atividades midia endereco"
+    "visita atividades sobre icons"
+    "rs rs rs rs"
+    "cr cr cr cr";
+  grid-gap: 30px;
+  font-family: "Assistant", cursive;
+  color: #2c311e;
+  font-size: 16px;
+}
+
+footer .div-btts {
+  width: 200px;
+  height: 50px;
+}
+
+footer .div-btts .link-btts {
+  font-size: 14px;
+}
+
+#icons-footer {
+  grid-area: icons;
+  font-weight: 700;
+}
+
+#icons-footer a {
+  color: #2c311e;
+}
+
+#visita-footer {
+  grid-area: visita;
+}
+
+#visita-footer .div-btts {
+  margin-top: 30px;
+}
+
+#atividades-footer {
+  grid-area: atividades;
+}
+
+#midia-footer {
+  grid-area: midia;
+}
+
+#endereco-footer {
+  grid-area: endereco;
+  width: 200px;
+}
+
+#endereco-footer span:nth-of-type(1)::before {
+  content: url("img/mapa.svg");
+  margin-right: 10px;
+}
+
+#endereco-footer span:nth-of-type(2) {
+  margin-left: 26px;
+  margin-top: 0px;
+}
+
+#endereco-footer span:nth-of-type(3)::before {
+  content: url("img/tel.svg");
+  margin-right: 10px;
+}
+
+#endereco-footer span:nth-of-type(4)::before {
+  content: url("img/envelope.svg");
+  margin-right: 10px;
+}
+
+#endereco-footer span + span {
+  display: block;
+  margin-top: 15px;
+}
+
+#redes-sociais {
+  grid-area: rs;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -30px;
+  font-weight: bold;
+}
+
+#redes-sociais li a {
+  color: #2c311e;
+}
+
+#redes-sociais li {
+  padding: 15px;
+}
+
+#copyright {
+  grid-area: cr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 25px;
+  border-top: 2px solid #dff164;
+}
+
+.item-footer p,
+#sobre-footer {
+  color: #2c311e;
+  font-weight: 700;
+}
+
+.item-footer li a {
+  color: #2c311e;
+}
+
+.item-footer li + li {
+  margin-top: 5px;
+}
+
+.item-footer ul {
+  margin-top: 10px;
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(30px, 0, 0);
+  transition: 0.7s;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.js .js-scroll2 {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: 0.9s;
+}
+
+.js .js-scroll2.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.js .js-menu-nav {
+  display: none !important;
+}
+
+.js .js-menu-nav.ativo {
+  display: block !important;
+  animation: show 0.4s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+

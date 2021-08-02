@@ -424,7 +424,7 @@ header #logo p {
   margin-bottom: -70px;
   display: block;
   overflow: hidden;
-  width: 100%;
+  min-width: 100%;
 }
 
 #recomendacoes p {

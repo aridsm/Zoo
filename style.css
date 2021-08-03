@@ -109,6 +109,7 @@ header #logo {
   text-align: center;
   justify-self: start;
   grid-area: logo;
+  margin-left: 20px;
 }
 
 header #logo p {
@@ -123,6 +124,7 @@ header #logo p {
   grid-area: headerup;
   border-bottom: 2px solid #6b311b;
   padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 #header-up span {
@@ -199,6 +201,7 @@ header #logo p {
   font-family: "Assistant", sans-serif;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 #header-down ul {
@@ -372,6 +375,7 @@ header #logo p {
   width: 100%;
   height: 100%;
   margin: 0;
+  position: absolute;
 }
 
 #section-principal {
@@ -383,13 +387,14 @@ header #logo p {
   margin-bottom: -70px;
   display: block;
   overflow: hidden;
+  position: relative;
 }
 
 #section-principal #conteudo {
   padding: calc((100% - 1050px) / 2);
   padding-top: 100px;
   padding-bottom: 100px;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
 }
@@ -405,17 +410,22 @@ header #logo p {
   text-align: left;
   margin-bottom: 50px;
   text-transform: uppercase;
+  margin-left: 20px;
 }
 
 #section-principal .div-btts + .div-btts {
   margin-top: 20px;
 }
 
+#section-principal .div-btts {
+  margin-left: 20px;
+}
+
 /** recomendacoes **/
 
 #recomendacoes {
   background-image: url("img/secao_alerta.svg");
-  background-repeat: repeat;
+  background-repeat: repeat-x;
   background-position: cover;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -556,6 +566,7 @@ header #logo p {
   text-align: left;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 20px;
 }
 
 #section-promos form {
@@ -563,6 +574,7 @@ header #logo p {
   margin: 0;
   display: flex;
   justify-self: end;
+  margin-right: 20px;
 }
 
 #section-promos form #email-promo {
@@ -692,10 +704,11 @@ header #logo p {
   background-size: 300px, 300px, cover;
   background-position: 5% 103%, 95% -3%, center;
   display: grid;
-  grid-template-columns: repeat(3, 290px);
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
-  justify-content: space-between;
+
   z-index: 2;
+  width: 100%;
 }
 
 :is(.subtitulo-section, .titulo-section) {
@@ -735,11 +748,14 @@ header #logo p {
 }
 
 #section-novidades article {
-  width: 100%;
+  width: 270px;
   padding: 19px 13px;
   border: 2px solid #d7eb5a;
   border-radius: 16px;
   position: relative;
+  display: block;
+  justify-self: center;
+  margin: 20px;
 }
 
 #section-novidades article h3 {
@@ -842,6 +858,7 @@ header #logo p {
   margin-left: 0;
   text-align: left;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 #section-sobre {
@@ -866,11 +883,13 @@ header #logo p {
   font-size: 18px;
   line-height: 1.5;
   text-align: left;
+  margin-left: 20px;
 }
 
 #section-sobre .div-btts {
   grid-column: 1;
   width: 200px;
+  margin-left: 20px;
 }
 
 #section-sobre img {
@@ -1002,7 +1021,7 @@ footer {
     "visita atividades sobre icons"
     "rs rs rs rs"
     "cr cr cr cr";
-  grid-gap: 30px;
+  grid-gap: 10px;
   font-family: "Assistant", cursive;
   color: #2c311e;
   font-size: 16px;
@@ -1047,6 +1066,10 @@ footer .div-btts .link-btts {
   width: 200px;
 }
 
+#mapa {
+  grid-area: mapa;
+}
+
 #endereco-footer span:nth-of-type(1)::before {
   content: url("img/mapa.svg");
   margin-right: 10px;
@@ -1076,7 +1099,7 @@ footer .div-btts .link-btts {
   grid-area: rs;
   display: flex;
   justify-content: center;
-  margin-bottom: -30px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
@@ -1100,10 +1123,19 @@ footer .div-btts .link-btts {
   border-top: 2px solid #dff164;
 }
 
+.item-footer {
+  margin: 20px;
+}
+
 .item-footer p,
 #sobre-footer {
   color: #2c311e;
   font-weight: 700;
+}
+
+#sobre-footer {
+  margin: 20px;
+  grid-area: sobre;
 }
 
 .item-footer li a {
@@ -1158,5 +1190,134 @@ footer .div-btts .link-btts {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media all and (max-width: 950px) {
+  #section-atividades {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  #section-eventos {
+    grid-template-columns: auto;
+  }
+
+  .card-evento + .card-evento {
+    margin-top: 60px;
+  }
+
+  #section-novidades {
+    grid-template-columns: auto;
+    justify-content: center;
+    background-size: 250px, 250px, cover;
+    background-position: 5% 100%, 95% 0%, center;
+  }
+
+  #section-novidades article {
+    width: 320px;
+  }
+
+  #section-novidades article + article {
+    margin-top: 60px;
+  }
+
+  #section-sobre {
+    grid-template-columns: auto;
+
+    margin-top: -10px;
+  }
+
+  #section-sobre img {
+    grid-row: 1 / 4;
+    width: 650px;
+    display: block;
+    max-width: 100%;
+    justify-self: right;
+    position: relative;
+    top: -120px;
+  }
+
+  #section-sobre .titulo-section {
+    margin-top: -180px;
+  }
+
+  #section-sobre p {
+    margin-top: -100px;
+    margin-bottom: 30px;
+  }
+
+  #section-contato form {
+    grid-template-columns: auto;
+  }
+
+  #section-contato textarea {
+    width: 500px;
+  }
+
+  #section-contato .div-btts {
+    grid-column: 1;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #section-contato form {
+    width: 85%;
+  }
+
+  #section-contato textarea {
+    width: 100%;
+  }
+
+  .titulo-section {
+    font-size: 32px;
+  }
+
+  #recomendacoes p {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  footer {
+    margin-top: -120px;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "visita"
+      "atividades"
+      "mapa"
+      "midia"
+      "sobre"
+      "endereco"
+      "icons"
+      "rs"
+      "cr";
+    justify-content: center;
+  }
+
+  .item-footer {
+    text-align: center;
+  }
+
+  footer .div-btts {
+    margin: 0 auto;
+  }
+
+  #endereco-footer {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  #sobre-footer {
+    text-align: center;
+  }
+
+  #redes-sociais {
+    margin-top: 50px;
+  }
+
+  #copyright {
+    font-size: 16px;
   }
 }

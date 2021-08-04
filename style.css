@@ -1268,6 +1268,29 @@ footer .div-btts .link-btts {
 }
 
 @media all and (max-width: 900px) {
+  #section-promos {
+    background-size: 200px, cover;
+    grid-template-columns: auto;
+    margin-top: -10px;
+  }
+
+  #section-promos form {
+    grid-column: 1;
+    margin-right: 0px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  #section-promos form #email-promo {
+    width: 100%;
+  }
+
+  #section-promos .titulo-section {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+
   footer {
     margin-top: -120px;
     grid-template-columns: auto;

@@ -394,12 +394,18 @@ header #logo p {
 
 /** principal **/
 
-#section-principal img {
+.slider img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider img.selecionado {
+  opacity: 1;
 }
 
 #section-principal .imgs-principal {
@@ -1297,7 +1303,7 @@ footer .div-btts .link-btts {
   }
 
   #section-sobre .titulo-section {
-    margin-top: -180px;
+    margin-top: -150px;
   }
 
   #section-sobre p {
@@ -1414,9 +1420,8 @@ footer .div-btts .link-btts {
     font-size: 42px;
     text-align: center;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
   }
-  
 
   #section-contato textarea {
     width: 100%;
@@ -1472,9 +1477,10 @@ footer .div-btts .link-btts {
     z-index: 21;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 25px;
+    padding-top: 35px;
     position: absolute;
     display: none;
+    position: fixed;
   }
 
   #header-up .div-btts {
@@ -1527,10 +1533,11 @@ footer .div-btts .link-btts {
     background-color: #a83225;
     z-index: 20;
     width: 100%;
-    height: auto;
-    position: absolute;
+    height: calc(100vh + 10px);
+    position: fixed;
     margin-top: -10px;
     display: none;
+    overflow: hidden;
   }
 
   #header-down ul {
@@ -1600,10 +1607,11 @@ footer .div-btts .link-btts {
     margin-left: auto;
     color: #f1ebe8;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     background-color: transparent;
     z-index: 50;
+    position: fixed;
   }
 }
 

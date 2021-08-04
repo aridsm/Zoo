@@ -105,9 +105,38 @@
   <a href="#" id="scroll-to-top">▲</a>
 
   <section id="section-principal">
-    <div class="imgs-principal">
+    <div class="imgs-principal slider">
+      <img src="img/principal1.jpg" alt="jacaré" class="selecionado">
       <img src="img/principal2.jpg" alt="coalas">
+      <img src="img/principal3.jpg" alt="flamingos">
     </div>
+
+    <script>
+      let time = 8000,
+        currentImageIndex = 0,
+        images = document.querySelectorAll('.slider img'),
+        max = images.length;
+
+      function nextImage() {
+        images[currentImageIndex].classList.remove("selecionado")
+
+
+        currentImageIndex++
+
+        if (currentImageIndex >= max) {
+          currentImageIndex = 0
+        }
+        images[currentImageIndex].classList.add("selecionado")
+      }
+
+      function start() {
+        setInterval(() => {
+          nextImage()
+        }, time)
+      }
+
+      window.addEventListener("load", start)
+    </script>
 
     <div id="conteudo">
       <h1>Lorem Ipsum Dolor Sit Amet</h1>

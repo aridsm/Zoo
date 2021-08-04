@@ -122,7 +122,6 @@ header {
   margin-bottom: -50px;
   position: relative;
   z-index: 50;
-  overflow: hidden;
 }
 
 #menu-mobile {
@@ -1387,9 +1386,37 @@ footer .div-btts .link-btts {
 }
 
 @media all and (max-width: 600px) {
+  .div-btts {
+    height: 55px;
+    width: 250px;
+    font-size: 18px;
+  }
+
+  #section-sobre .div-btts {
+    width: 160px;
+  }
+
   #section-contato form {
     width: 85%;
   }
+
+  #section-contato .div-btts {
+    width: 230px;
+  }
+
+  #section-principal .div-btts {
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+
+  #section-principal #conteudo h1 {
+    width: 280px;
+    font-size: 42px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+  }
+  
 
   #section-contato textarea {
     width: 100%;
@@ -1400,7 +1427,7 @@ footer .div-btts .link-btts {
   }
 
   #recomendacoes p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   /***********/

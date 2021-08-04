@@ -122,9 +122,14 @@ header {
   margin-bottom: -50px;
   position: relative;
   z-index: 50;
+  overflow: hidden;
 }
 
 #menu-mobile {
+  display: none;
+}
+
+#fechar-mobile {
   display: none;
 }
 
@@ -1193,8 +1198,8 @@ footer .div-btts .link-btts {
 
 .js .js-scroll {
   opacity: 0;
-  transform: translate3d(30px, 0, 0);
-  transition: 0.5s;
+  transform: translate3d(20px, 0, 0);
+  transition: 0.6s;
 }
 
 .js .js-scroll.ativo {
@@ -1204,24 +1209,15 @@ footer .div-btts .link-btts {
 
 .js .js-scroll2 {
   opacity: 0;
-  transform: translate3d(0, -30px, 0);
-  transition: 0.5s;
+  transform: translate3d(0, -20px, 0);
+  transition: 0.6s;
 }
 
 .js .js-scroll2.ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-/*
-.js .js-menu-nav {
-  display: none !important;
-}
 
-.js .js-menu-nav.ativo {
-  display: block !important;
-  animation: show 0.4s forwards;
-}
-*/
 @keyframes show {
   from {
     opacity: 0;
@@ -1333,7 +1329,7 @@ footer .div-btts .link-btts {
   #section-promos form {
     grid-column: 1;
     margin-right: 0px;
-    width: 90%;
+    width: 320px;
     margin: 0 auto;
     margin-top: 30px;
   }
@@ -1568,12 +1564,28 @@ footer .div-btts .link-btts {
     position: relative;
     z-index: 1;
   }
+
+  #fechar-mobile {
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    color: #f1ebe8;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    z-index: 50;
+  }
 }
 
-#visita {
+.js #visita {
   display: none;
+  animation: show 0.4s forwards;
 }
 
-#menu-atividades {
+.js #menu-atividades {
   display: none;
+  animation: show 0.4s forwards;
 }

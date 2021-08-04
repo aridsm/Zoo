@@ -60,3 +60,26 @@ window.addEventListener('mouseup',function(event){
       atividades.style.display = 'none';
   }
 });  
+
+/* *****  */
+
+
+var headerUp =  document.querySelector('#header-up');
+var headerDown = document.querySelector('#header-down')
+var fecharMobile = document.querySelector('#fechar-mobile')
+
+document.getElementById('menu-mobile').addEventListener('mouseup', function(event) {
+
+  headerUp.style.display='flex';
+ headerDown.style.display='flex';
+ fecharMobile.style.display='block'
+
+})
+
+fecharMobile.addEventListener('mouseup', function(event) {
+
+  headerUp.style.display='none';
+ headerDown.style.display='none';
+ fecharMobile.style.display='none'
+
+})

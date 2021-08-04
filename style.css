@@ -469,7 +469,7 @@ header #logo p {
 /** atividades **/
 #section-atividades {
   display: grid;
-  grid-template-columns: 415px 415px;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
   bottom: -40px;
@@ -493,7 +493,7 @@ header #logo p {
   display: flex;
   align-items: center;
   background-color: #dff164;
-  width: 100%;
+  width: 415px;
   box-shadow: -1px 8px 9px rgba(0, 0, 0, 0.11);
   color: #8ba81c;
   font-family: "Love Ya Like A Sister", cursive;
@@ -712,7 +712,6 @@ header #logo p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: relative;
-
   z-index: 2;
   width: 100%;
 }
@@ -890,6 +889,7 @@ header #logo p {
   line-height: 1.5;
   text-align: left;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 #section-sobre .div-btts {
@@ -1206,6 +1206,28 @@ footer .div-btts .link-btts {
     grid-template-columns: auto;
   }
 
+  .card-atividade {
+    font-size: 14px;
+    width: 320px;
+  }
+
+  .card-atividade img {
+    width: auto;
+    height: 100px;
+  }
+
+  .card-atividade::before {
+    height: 200%;
+    width: 1%;
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+
+  .card-atividade:hover::before {
+    background-color: #f5c81d;
+    width: 100%;
+  }
+
   #section-eventos {
     grid-template-columns: auto;
   }
@@ -1391,11 +1413,12 @@ footer .div-btts .link-btts {
     padding-bottom: 15px;
     margin-right: 20px;
     flex-direction: column;
-    position: absolute;
     z-index: 21;
     width: 100%;
     justify-content: flex-start;
     padding-top: 25px;
+    position: absolute;
+    display: none;
   }
 
   #header-up .div-btts {
@@ -1445,11 +1468,13 @@ footer .div-btts .link-btts {
     padding-top: 200px;
     padding-bottom: 25px;
     margin-right: 20px;
-    position: absolute;
     background-color: #a83225;
     z-index: 20;
     width: 100%;
     height: auto;
+    position: absolute;
+    margin-top: -10px;
+    display: none;
   }
 
   #header-down ul {

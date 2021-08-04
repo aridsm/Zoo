@@ -45,36 +45,18 @@ function initAnimaScroll() {
 
   /***********/ 
 
-  function initTabNav() {
+  var visita = document.querySelector('#visita');
+window.addEventListener('mouseup',function(event){
 
-    const tabMenu = document.querySelectorAll('.js-menu-botao')
-    const tabContent = document.querySelectorAll('.js-menu-nav')
-    
-    if (tabMenu.length && tabContent.length){
-    
-    function activeTab(index) {
-      tabContent.forEach((content) => {
-        content.classList.remove('ativo')
-      })
-      tabContent[index].classList.add('ativo')
-    }
-
-
-
-
-    
-    tabMenu.forEach((itemMenu, index) => {
-      itemMenu.addEventListener('click', function() {
-        activeTab(index)
-      })
-    })
-    }
+  if(event.target != visita && event.target.parentNode != visita){
+      visita.style.display = 'none';
   }
-    
-    initTabNav()
- 
+});  
 
-/*** */
+var atividades = document.querySelector('#menu-atividades');
+window.addEventListener('mouseup',function(event){
 
-
-
+  if(event.target != atividades && event.target.parentNode != atividades){
+      atividades.style.display = 'none';
+  }
+});  

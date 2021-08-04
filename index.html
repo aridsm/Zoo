@@ -40,12 +40,12 @@
 
     <div id="header-down">
       <ul>
-        <li><button class="item-menu js-menu-botao">
+        <li><button class="item-menu js-menu-botao" onClick="document.querySelector('#visita').style.display='block'">
             <p class="menu">Visita</p>
             <p class="descricao-menu">Planeje sua visita!</p>
           </button>
 
-          <div class="menu-opcoes menu-visita js-menu-nav" id="menu-visita">
+          <div id="visita" class="menu-opcoes menu-visita js-menu-nav">
             <ul>
               <li><a href="">Compre seu ingresso</a></li>
               <li><a href="">Localização</a></li>
@@ -57,12 +57,12 @@
 
 
 
-        <li><button class="item-menu js-menu-botao">
+        <li><button class="item-menu js-menu-botao" onClick="document.querySelector('#menu-atividades').style.display='block'">
             <p class="menu">Atividades</p>
             <p class="descricao-menu">O que você pode fazer aqui!</p>
           </button>
 
-          <div class="menu-opcoes menu-atividades js-menu-nav">
+          <div id="menu-atividades" class="menu-opcoes menu-atividades js-menu-nav">
             <ul>
               <li><a href="">Acampamento</a></li>
               <li><a href="">Atrações</a></li>
@@ -95,6 +95,7 @@
     </div>
   </header>
 
+  <a href="#" id="scroll-to-top">🡅</a>
 
   <section id="section-principal">
     <div class="imgs-principal">
@@ -166,6 +167,7 @@
 
     <div class="card-evento js-scroll">
       <h3>Lorem ipsum</h3>
+      <span>Data: 12/12/21</span>
       <img src="img/eventos1.jpg" alt="Lemures">
       <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
       </p>
@@ -174,6 +176,7 @@
 
     <div class="card-evento js-scroll">
       <h3>Lorem ipsum</h3>
+      <span>Data: 12/12/21</span>
       <img src="img/eventos2.jpg" alt="Camelos">
       <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
       </p>

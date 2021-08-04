@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -82,6 +83,28 @@ section {
   background-color: #f1720c;
 }
 
+#scroll-to-top {
+  position: fixed;
+  z-index: 60;
+  bottom: 50px;
+  right: 15px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 220, 80) 0%,
+    rgb(237, 189, 9) 25%,
+    rgb(231, 180, 13) 80%,
+    rgb(207, 152, 41) 95%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #85640b;
+  font-size: 22px;
+  border: 2px solid #85640b;
+}
 /** header **/
 
 header {
@@ -478,11 +501,12 @@ header #logo p {
   background-image: url("img/detalhe_atividades.svg");
   background-repeat: no-repeat;
   background-size: 450px;
-  background-position: 109% 2%;
+  background-position: 109% 1%;
   padding-bottom: 120px;
   bottom: -50px;
   grid-gap: 30px;
   justify-content: center;
+  margin-top: -5px;
 }
 
 #section-atividades .titulo-section {
@@ -504,6 +528,7 @@ header #logo p {
   border-radius: 16px;
   position: relative;
   overflow: hidden;
+  justify-self: center;
 }
 
 .card-atividade::before {
@@ -623,7 +648,7 @@ header #logo p {
   background: #f1ebe8;
   background-image: url("img/detalhe_eventos.svg"),
     url("img/detalhe_eventos.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100px;
   background-position-x: 95%, 5%;
   display: grid;
@@ -665,7 +690,7 @@ header #logo p {
   font-size: 30px;
   line-height: 1;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .card-evento p {
@@ -685,6 +710,15 @@ header #logo p {
   position: relative;
   z-index: 2;
   border-radius: 16px;
+}
+
+.card-evento span {
+  font-family: "Assistant";
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #2c311ecc;
 }
 
 .card-evento .btts-seta {
@@ -1178,7 +1212,7 @@ footer .div-btts .link-btts {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-
+/*
 .js .js-menu-nav {
   display: none !important;
 }
@@ -1187,7 +1221,7 @@ footer .div-btts .link-btts {
   display: block !important;
   animation: show 0.4s forwards;
 }
-
+*/
 @keyframes show {
   from {
     opacity: 0;
@@ -1398,7 +1432,6 @@ footer .div-btts .link-btts {
     text-align: center;
     justify-self: start;
     grid-area: logo;
-    margin-left: auto;
     margin-right: auto;
   }
 
@@ -1535,4 +1568,12 @@ footer .div-btts .link-btts {
     position: relative;
     z-index: 1;
   }
+}
+
+#visita {
+  display: none;
+}
+
+#menu-atividades {
+  display: none;
 }

@@ -102,7 +102,7 @@ section {
   justify-content: center;
   align-items: center;
   color: #85640b;
-  font-size: 22px;
+  font-size: 30px;
   border: 2px solid #85640b;
 }
 /** header **/
@@ -534,10 +534,9 @@ header #logo p {
 .card-atividade {
   display: flex;
   align-items: center;
-  background-color: #dff164;
+  background-color: transparent;
   width: 415px;
-  box-shadow: -1px 8px 9px rgba(0, 0, 0, 0.11);
-  color: #8ba81c;
+  color: #dff164;
   font-family: "Love Ya Like A Sister", cursive;
   letter-spacing: 1px;
   font-size: 18px;
@@ -547,34 +546,23 @@ header #logo p {
   position: relative;
   overflow: hidden;
   justify-self: center;
+  border: 2px solid #d7eb5a;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
 }
 
-.card-atividade::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 300%;
-  background-color: transparent;
-  right: -50px;
-  bottom: 15px;
-  transform: rotate(50deg);
-  transform-origin: -150px;
-  transition: width 0.5s ease-out;
-}
-
-.card-atividade:hover::before {
-  background-color: #f5c81d;
-  width: 250px;
+.card-atividade:hover {
+  top: 5px;
 }
 
 .card-atividade:active {
-  top: 5px;
+  top: 15px;
 }
 
 .card-atividade h3 {
   margin-left: auto;
   padding-right: 20px;
   z-index: 2;
+  font-weight: 400;
 }
 
 .card-atividade img {
@@ -813,6 +801,7 @@ header #logo p {
   display: block;
   justify-self: center;
   margin: 20px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
 }
 
 #section-novidades article h3 {
@@ -1261,18 +1250,6 @@ footer .div-btts .link-btts {
   .card-atividade img {
     width: auto;
     height: 100px;
-  }
-
-  .card-atividade::before {
-    height: 200%;
-    width: 1%;
-    bottom: 0px;
-    transform: rotate(0deg);
-  }
-
-  .card-atividade:hover::before {
-    background-color: #f5c81d;
-    width: 100%;
   }
 
   #section-eventos {

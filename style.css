@@ -102,9 +102,16 @@ section {
   justify-content: center;
   align-items: center;
   color: #85640b;
-  font-size: 30px;
+  font-size: 24px;
   border: 2px solid #85640b;
 }
+
+#scroll-to-top span {
+  text-align: center;
+  transform: rotate(-90deg);
+  margin-right:3px
+}
+
 /** header **/
 
 header {

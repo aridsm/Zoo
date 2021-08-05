@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
   <script>
     document.documentElement.className += ' js'
   </script>
@@ -106,15 +107,23 @@
 
   <section id="section-principal">
     <div class="imgs-principal slider">
-      <img src="img/principal1.jpg" alt="jacaré" class="selecionado">
-      <img src="img/principal2.jpg" alt="coalas">
-      <img src="img/principal3.jpg" alt="flamingos">
+      <div class="fundo1">
+
+      </div>
+
+      <div class="fundo2">
+
+      </div>
+
+      <div class="fundo3">
+
+      </div>
     </div>
 
     <script>
       let time = 8000,
         currentImageIndex = 0,
-        images = document.querySelectorAll('.slider img'),
+        images = document.querySelectorAll('.slider div'),
         max = images.length;
 
       function nextImage() {

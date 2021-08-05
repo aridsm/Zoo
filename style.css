@@ -400,10 +400,11 @@ header #logo p {
   height: 100%;
   object-fit: cover;
   position: absolute;
-  display: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .slider .fundo1 {
@@ -419,7 +420,7 @@ header #logo p {
 }
 
 .slider div.selecionado {
-  display: block;
+  opacity: 1;
 }
 
 #section-principal {

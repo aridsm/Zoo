@@ -83,3 +83,36 @@ fecharMobile.addEventListener('mouseup', function(event) {
  fecharMobile.style.display='none'
 
 })
+
+/**** */
+
+$(window).on('load', function () {
+  $("#loader").fadeOut(2000);
+})
+
+/******** */
+
+let time = 6000,
+  currentImageIndex = 0,
+  images = document.querySelectorAll('.slider div'),
+  max = images.length;
+
+function nextImage() {
+  images[currentImageIndex].classList.remove("selecionado")
+
+
+  currentImageIndex++
+
+  if (currentImageIndex >= max) {
+    currentImageIndex = 0
+  }
+  images[currentImageIndex].classList.add("selecionado")
+}
+
+function start() {
+  setInterval(() => {
+    nextImage()
+  }, time)
+}
+
+window.addEventListener("load", start)

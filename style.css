@@ -109,7 +109,7 @@ section {
 #scroll-to-top span {
   text-align: center;
   transform: rotate(-90deg);
-  margin-right:3px
+  margin-right: 3px;
 }
 
 /** header **/
@@ -414,6 +414,7 @@ header #logo p {
   transition: all 0.5s ease;
 }
 
+
 .slider .fundo1 {
   background-image: url("img/fundo1.jpg");
 }
@@ -429,6 +430,7 @@ header #logo p {
 .slider div.selecionado {
   opacity: 1;
 }
+
 
 #section-principal {
   padding: 0;
@@ -1634,4 +1636,82 @@ footer .div-btts .link-btts {
 .js #menu-atividades {
   display: none;
   animation: show 0.4s forwards;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #8ba81c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader #pontos {
+  display: flex;
+  margin-top: 20px;
+}
+
+#loader #texto {
+  font-family: "Love Ya Like A Sister";
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #dff164;
+}
+
+#loader img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+#loader span {
+  background-color: #dff164;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+  display: block;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  text-align: center;
+}
+
+#loader span:first-of-type {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#loader span:nth-of-type(2) {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#loader span:nth-of-type(3) {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes loading {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 8px;
+  }
 }

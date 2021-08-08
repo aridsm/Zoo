@@ -10,349 +10,338 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/toucan_icon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script>
     document.documentElement.className += ' js'
   </script>
 </head>
 
 <body>
-  <header>
-    <a href="index.html" id="logo">
-      <img src="img/trees.png" alt="logo icone">
-      <p>Zoo</p>
+
+  <div id="loader">
+    <img src="img/toucan_loader.png" alt="logo">
+    <div id="texto">Aguarde um momento...</div>
+    <div id="pontos">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div>
+
+    <header>
+      <a href="index.html" id="logo">
+        <img src="img/toucan_logo.png" alt="logo icone">
+        <p>Zoo</p>
+      </a>
+
+      <button id="menu-mobile" class="div-btts">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+          <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+        </svg>
+      </button>
+
+      <button id="fechar-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </button>
+
+      <div id="header-up">
+        <span>Tel: +00 (12) 3456-7890</span>
+        <form>
+          <label for="pesquisar"></label>
+          <input type="search" name="pesquisar" id="pesquisar" placeholder="Pesquise no site...">
+          <div class="btts-seta"><input type="submit" value="➜" class="link-seta"></div>
+        </form>
+        <div class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></div>
+      </div>
+
+      <div id="header-down">
+        <ul>
+          <li><button class="item-menu" onClick="document.querySelector('#visita').style.display='block'">
+              <p class="menu">Visita</p>
+              <p class="descricao-menu">Planeje sua visita!</p>
+            </button>
+
+            <div id="visita" class="menu-opcoes menu-visita">
+              <ul>
+                <li><a href="">Compre seu ingresso</a></li>
+                <li><a href="">Localização</a></li>
+                <li><a href="">Planeje sua visita</a></li>
+                <li><a href="">Regras e recomendações</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+
+          <li><button class="item-menu" onClick="document.querySelector('#menu-atividades').style.display='block'">
+              <p class="menu">Atividades</p>
+              <p class="descricao-menu">O que você pode fazer aqui!</p>
+            </button>
+
+            <div id="menu-atividades" class="menu-opcoes menu-atividades">
+              <ul>
+                <li><a href="">Acampamento</a></li>
+                <li><a href="">Atrações</a></li>
+                <li><a href="">Escalada</a></li>
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Piquenique</a></li>
+                <li><a href="">Restaurantes</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a href="" class="item-menu">
+              <p class="menu">Mapa</p>
+              <p class="descricao-menu">Veja e baixe o mapa do Zoo!</p>
+            </a>
+          </li>
+
+          <li><a href="" class="item-menu">
+              <p class="menu">Mídia</p>
+              <p class="descricao-menu">Redes sociais e contato!</p>
+            </a>
+          </li>
+
+          <li><a href="" class="item-menu">
+              <p class="menu">Sobre</p>
+              <p class="descricao-menu">Conheça o Zoo!</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <a href="#" id="scroll-to-top"><span>➜</span></a>
+
+    <section id="section-principal">
+      <div class="imgs-principal slider">
+        <div class="fundo1 selecionado">
+        </div>
+
+        <div class="fundo2">
+        </div>
+
+        <div class="fundo3">
+        </div>
+      </div>
+
+
+      <div id="conteudo">
+        <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+        <div class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></div>
+        <div class="div-btts"><a href="" class="link-btts">Planeje sua visita ➜</a></div>
+      </div>
+    </section>
+
+    <a href="" id="recomendacoes">
+      <p>➜ Veja as regras e recomendações para a sua visita!!</p>
     </a>
 
-    <button id="menu-mobile" class="div-btts">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-      </svg>
-    </button>
+    <section id="section-atividades">
+      <p class="subtitulo-section js-scroll2">O que fazer aqui?</p>
+      <h2 class="titulo-section js-scroll2">Atividades</h2>
 
-    <button id="fechar-mobile">
-      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-      </svg>
-    </button>
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade6.png" alt="Tigre">
+        <h3>Atrações <br> ➜</h3>
+      </a>
 
-    <div id="header-up">
-      <span>Tel: +00 (12) 3456-7890</span>
-      <form>
-        <label for="pesquisar"></label>
-        <input type="search" name="pesquisar" id="pesquisar" placeholder="Pesquise no site...">
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade2.png" alt="Restaurante">
+        <h3>Restaurantes <br> ➜</h3>
+      </a>
+
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade3.png" alt="Escalada">
+        <h3>Escalada <br> ➜</h3>
+      </a>
+
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade4.png" alt="Piquenique">
+        <h3>Piquenique <br> ➜</h3>
+      </a>
+
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade5.png" alt="Urso polar">
+        <h3>Eventos <br> ➜</h3>
+      </a>
+
+      <a href="" class="card-atividade js-scroll">
+        <img src="img/atividade1.png" alt="Acampamento">
+        <h3>Acampamento <br> ➜</h3>
+      </a>
+
+    </section>
+
+
+    <section id="section-promos">
+      <h2 class="titulo-section js-scroll">Receba novidades e promoções sobre o Zoo no seu Email!</h2>
+      <form class="js-scroll">
+        <label for="email-promo">Email</label>
+        <input type="email" id="email-promo" name="email-promo" placeholder="Digite seu email">
         <div class="btts-seta"><input type="submit" value="➜" class="link-seta"></div>
       </form>
-      <div class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></div>
-    </div>
-
-    <div id="header-down">
-      <ul>
-        <li><button class="item-menu" onClick="document.querySelector('#visita').style.display='block'">
-            <p class="menu">Visita</p>
-            <p class="descricao-menu">Planeje sua visita!</p>
-          </button>
-
-          <div id="visita" class="menu-opcoes menu-visita">
-            <ul>
-              <li><a href="">Compre seu ingresso</a></li>
-              <li><a href="">Localização</a></li>
-              <li><a href="">Planeje sua visita</a></li>
-              <li><a href="">Regras e recomendações</a></li>
-            </ul>
-          </div>
-        </li>
+    </section>
 
 
+    <section id="section-eventos">
+      <p class="subtitulo-section js-scroll2">Procurando algo de especial?</p>
+      <h2 class="titulo-section js-scroll2">Próximos eventos</h2>
 
-        <li><button class="item-menu" onClick="document.querySelector('#menu-atividades').style.display='block'">
-            <p class="menu">Atividades</p>
-            <p class="descricao-menu">O que você pode fazer aqui!</p>
-          </button>
-
-          <div id="menu-atividades" class="menu-opcoes menu-atividades">
-            <ul>
-              <li><a href="">Acampamento</a></li>
-              <li><a href="">Atrações</a></li>
-              <li><a href="">Escalada</a></li>
-              <li><a href="">Eventos</a></li>
-              <li><a href="">Piquenique</a></li>
-              <li><a href="">Restaurantes</a></li>
-            </ul>
-          </div>
-        </li>
-
-        <li><a href="" class="item-menu">
-            <p class="menu">Mapa</p>
-            <p class="descricao-menu">Veja e baixe o mapa do Zoo!</p>
-          </a>
-        </li>
-
-        <li><a href="" class="item-menu">
-            <p class="menu">Mídia</p>
-            <p class="descricao-menu">Redes sociais e contato!</p>
-          </a>
-        </li>
-
-        <li><a href="" class="item-menu">
-            <p class="menu">Sobre</p>
-            <p class="descricao-menu">Conheça o Zoo!</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <a href="#" id="scroll-to-top"><span>➜</span></a>
-
-  <section id="section-principal">
-    <div class="imgs-principal slider">
-      <div class="fundo1">
-
+      <div class="card-evento js-scroll">
+        <h3>Lorem ipsum</h3>
+        <span>Data: 12/12/21</span>
+        <img src="img/eventos1.jpg" alt="Lemures">
+        <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
+        </p>
+        <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
       </div>
 
-      <div class="fundo2">
+      <div class="card-evento js-scroll">
+        <h3>Lorem ipsum</h3>
+        <span>Data: 12/12/21</span>
+        <img src="img/eventos2.jpg" alt="Camelos">
+        <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
+        </p>
+        <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
+      </div>
+    </section>
 
+
+    <section id="section-novidades">
+      <p class="subtitulo-section js-scroll2">O que há de novo no zoo?</p>
+      <h2 class="titulo-section js-scroll2">Novidades</h2>
+
+      <article class="js-scroll">
+        <h3>Lorem ipsum</h3>
+        <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+        <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
+      </article>
+
+      <article class="js-scroll">
+        <h3>Lorem ipsum</h3>
+        <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+        <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
+      </article>
+
+      <article class="js-scroll">
+        <h3>Lorem ipsum</h3>
+        <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
+        <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
+      </article>
+
+    </section>
+
+    <section id="section-sobre">
+      <h2 class="titulo-section js-scroll2">Sobre o Zoo</h2>
+      <p class="js-scroll">Sed convallis in tortor et mollis. Donec et lectus felis. Mauris dui felis, porta accumsan ligula eget, fermentum imperdiet velit. Morbi sit amet lectus accumsan, congue sapien eu, euismod sapien. Donec sed laoreet odio. Sed imperdiet malesuada ex, at malesuada nisi posuere sit amet. Nulla ante ante, aliquet ac tortor a, faucibus sollicitudin purus.</p>
+      <div class="div-btts js-scroll"><a href="" class="link-btts">Sobre nos ➜</a></div>
+      <img src="img/image939.png" alt="Jabuti">
+    </section>
+
+    <section id="section-contato">
+      <p class="subtitulo-section js-scroll2">Alguma dúvida?</p>
+      <h2 class="titulo-section js-scroll2">Entre em contato</h2>
+
+      <form class="js-scroll">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome">
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+
+        <label for="titulo">título</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Titulo da mensagem">
+
+        <label for="mensagem">mensagem</label>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+
+        <div class="div-btts"><input type="submit" value="Enviar mensagem ➜" id="enviar-mensagem" class="link-btts"></div>
+      </form>
+    </section>
+
+    <footer>
+
+
+      <div id="visita-footer" class="item-footer">
+        <p>Visita</p>
+        <ul>
+          <li><a href="">Localização</a></li>
+          <li><a href="">Regras e Recomendações</a></li>
+          <li class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></li>
+          <li class="div-btts"><a href="" class="link-btts">Planeje sua visita ➜</a></li>
+        </ul>
       </div>
 
-      <div class="fundo3">
 
+      <div id="atividades-footer" class="item-footer">
+        <p>Atividades</p>
+        <ul>
+          <li><a href="">Acampamento</a></li>
+          <li><a href="">Atrações</a></li>
+          <li><a href="">Escalada</a></li>
+          <li><a href="">Eventos</a></li>
+          <li><a href="">Piquenique</a></li>
+          <li><a href="">Restaurantes</a></li>
+        </ul>
       </div>
-    </div>
 
-    <script>
-      let time = 8000,
-        currentImageIndex = 0,
-        images = document.querySelectorAll('.slider div'),
-        max = images.length;
+      <div class="item-footer" id="mapa">
+        <p>Mapa</p>
+        <ul>
+          <li><a href="">Baixe o mapa</a></li>
+          <li><a href="">Mapa do Zoo</a></li>
+        </ul>
+      </div>
 
-      function nextImage() {
-        images[currentImageIndex].classList.remove("selecionado")
+      <div id="midia-footer" class="item-footer">
+        <p>Mídia</p>
+        <ul>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Redes sociais</a></li>
+        </ul>
+      </div>
 
+      <a href="" id="sobre-footer">Sobre</a>
 
-        currentImageIndex++
-
-        if (currentImageIndex >= max) {
-          currentImageIndex = 0
-        }
-        images[currentImageIndex].classList.add("selecionado")
-      }
-
-      function start() {
-        setInterval(() => {
-          nextImage()
-        }, time)
-      }
-
-      window.addEventListener("load", start)
-    </script>
-
-    <div id="conteudo">
-      <h1>Lorem Ipsum Dolor Sit Amet</h1>
-
-      <div class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></div>
-      <div class="div-btts"><a href="" class="link-btts">Planeje sua visita ➜</a></div>
-    </div>
-  </section>
-
-  <a href="" id="recomendacoes">
-    <p>➜ Veja as regras e recomendações para a sua visita!!</p>
-  </a>
-
-  <section id="section-atividades">
-    <p class="subtitulo-section js-scroll2">O que fazer aqui?</p>
-    <h2 class="titulo-section js-scroll2">Atividades</h2>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade6.png" alt="Tigre">
-      <h3>Atrações <br> ➜</h3>
-    </a>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade2.png" alt="Restaurante">
-      <h3>Restaurantes <br> ➜</h3>
-    </a>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade3.png" alt="Escalada">
-      <h3>Escalada <br> ➜</h3>
-    </a>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade4.png" alt="Piquenique">
-      <h3>Piquenique <br> ➜</h3>
-    </a>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade5.png" alt="Urso polar">
-      <h3>Eventos <br> ➜</h3>
-    </a>
-
-    <a href="" class="card-atividade js-scroll">
-      <img src="img/atividade1.png" alt="Acampamento">
-      <h3>Acampamento <br> ➜</h3>
-    </a>
-
-  </section>
+      <div id="endereco-footer">
+        <span>Lorem Ipsum - IP</span>
+        <span>Lorem 999</span>
+        <span>+00 (12) 3456-7890</span>
+        <span>zoo@contato.com</span>
+      </div>
 
 
-  <section id="section-promos">
-    <h2 class="titulo-section js-scroll">Receba novidades e promoções sobre o Zoo no seu Email!</h2>
-    <form class="js-scroll">
-      <label for="email-promo">Email</label>
-      <input type="email" id="email-promo" name="email-promo" placeholder="Digite seu email">
-      <div class="btts-seta"><input type="submit" value="➜" class="link-seta"></div>
-    </form>
-  </section>
-
-
-  <section id="section-eventos">
-    <p class="subtitulo-section js-scroll2">Procurando algo de especial?</p>
-    <h2 class="titulo-section js-scroll2">Próximos eventos</h2>
-
-    <div class="card-evento js-scroll">
-      <h3>Lorem ipsum</h3>
-      <span>Data: 12/12/21</span>
-      <img src="img/eventos1.jpg" alt="Lemures">
-      <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
-      </p>
-      <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
-    </div>
-
-    <div class="card-evento js-scroll">
-      <h3>Lorem ipsum</h3>
-      <span>Data: 12/12/21</span>
-      <img src="img/eventos2.jpg" alt="Camelos">
-      <p>Cras placerat diam non ante rutrum, interdum iaculis felis malesuada. Etiam dapibus et turpis vel laoreet. Proin fringilla nibh ac erat porta laoreet.
-      </p>
-      <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
-    </div>
-  </section>
-
-
-  <section id="section-novidades">
-    <p class="subtitulo-section js-scroll2">O que há de novo no zoo?</p>
-    <h2 class="titulo-section js-scroll2">Novidades</h2>
-
-    <article class="js-scroll">
-      <h3>Lorem ipsum</h3>
-      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
-      <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
-    </article>
-
-    <article class="js-scroll">
-      <h3>Lorem ipsum</h3>
-      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
-      <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
-    </article>
-
-    <article class="js-scroll">
-      <h3>Lorem ipsum</h3>
-      <p>Phasellus hendrerit accumsan metus, vel porta sapien blandit a. Integer non velit id sem lacinia congue sed sed ligula.</p>
-      <div class="btts-seta"><a href="" class="link-seta">➜</a></div>
-    </article>
-
-  </section>
-
-  <section id="section-sobre">
-    <h2 class="titulo-section js-scroll2">Sobre o Zoo</h2>
-    <p class="js-scroll">Sed convallis in tortor et mollis. Donec et lectus felis. Mauris dui felis, porta accumsan ligula eget, fermentum imperdiet velit. Morbi sit amet lectus accumsan, congue sapien eu, euismod sapien. Donec sed laoreet odio. Sed imperdiet malesuada ex, at malesuada nisi posuere sit amet. Nulla ante ante, aliquet ac tortor a, faucibus sollicitudin purus.</p>
-    <div class="div-btts js-scroll"><a href="" class="link-btts">Sobre nos ➜</a></div>
-    <img src="img/image939.png" alt="Jabuti">
-  </section>
-
-  <section id="section-contato">
-    <p class="subtitulo-section js-scroll2">Alguma dúvida?</p>
-    <h2 class="titulo-section js-scroll2">Entre em contato</h2>
-
-    <form class="js-scroll">
-      <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome" placeholder="Nome">
-
-      <label for="sobrenome">Sobrenome</label>
-      <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
-
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Email">
-
-      <label for="titulo">título</label>
-      <input type="text" name="titulo" id="titulo" placeholder="Titulo da mensagem">
-
-      <label for="mensagem">mensagem</label>
-      <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
-
-      <div class="div-btts"><input type="submit" value="Enviar mensagem ➜" id="enviar-mensagem" class="link-btts"></div>
-    </form>
-  </section>
-
-  <footer>
-
-
-    <div id="visita-footer" class="item-footer">
-      <p>Visita</p>
-      <ul>
-        <li><a href="">Localização</a></li>
-        <li><a href="">Regras e Recomendações</a></li>
-        <li class="div-btts"><a href="" class="link-btts">Compre seu ingresso ➜</a></li>
-        <li class="div-btts"><a href="" class="link-btts">Planeje sua visita ➜</a></li>
+      <ul id="redes-sociais">
+        <li><a href="">Facebook</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Instagram</a></li>
       </ul>
-    </div>
 
+      <div id="copyright">
+        <p>Copyright - 2021</p>
+        <p>Ariane Morelato</p>
+      </div>
 
-    <div id="atividades-footer" class="item-footer">
-      <p>Atividades</p>
-      <ul>
-        <li><a href="">Acampamento</a></li>
-        <li><a href="">Atrações</a></li>
-        <li><a href="">Escalada</a></li>
-        <li><a href="">Eventos</a></li>
-        <li><a href="">Piquenique</a></li>
-        <li><a href="">Restaurantes</a></li>
-      </ul>
-    </div>
+      <div id="icons-footer">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-    <div class="item-footer" id="mapa">
-      <p>Mapa</p>
-      <ul>
-        <li><a href="">Baixe o mapa</a></li>
-        <li><a href="">Mapa do Zoo</a></li>
-      </ul>
-    </div>
+    </footer>
 
-    <div id="midia-footer" class="item-footer">
-      <p>Mídia</p>
-      <ul>
-        <li><a href="">Contato</a></li>
-        <li><a href="">Redes sociais</a></li>
-      </ul>
-    </div>
+    <script src="script.js"></script>
 
-    <a href="" id="sobre-footer">Sobre</a>
+  </div>
 
-    <div id="endereco-footer">
-      <span>Lorem Ipsum - IP</span>
-      <span>Lorem 999</span>
-      <span>+00 (12) 3456-7890</span>
-      <span>zoo@contato.com</span>
-    </div>
-
-
-    <ul id="redes-sociais">
-      <li><a href="">Facebook</a></li>
-      <li><a href="">Twitter</a></li>
-      <li><a href="">Instagram</a></li>
-    </ul>
-
-    <div id="copyright">
-      <p>Copyright - 2021</p>
-      <p>Ariane Morelato</p>
-    </div>
-
-    <div id="icons-footer">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

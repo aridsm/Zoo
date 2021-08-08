@@ -414,7 +414,6 @@ header #logo p {
   transition: all 0.5s ease;
 }
 
-
 .slider .fundo1 {
   background-image: url("img/fundo1.jpg");
 }
@@ -430,7 +429,6 @@ header #logo p {
 .slider div.selecionado {
   opacity: 1;
 }
-
 
 #section-principal {
   padding: 0;
@@ -686,6 +684,7 @@ header #logo p {
 .titulo-section {
   grid-column: 1 / -1;
   margin: 0 auto;
+  padding: 0;
   font-family: "Love Ya Like A Sister", cursive;
   color: #ffffff;
   text-align: center;
@@ -763,15 +762,6 @@ header #logo p {
   position: relative;
   z-index: 2;
   width: 100%;
-}
-
-.subtitulo-section .titulo-section {
-  grid-column: 1 / -1;
-  margin: 0 auto;
-  font-family: "Love Ya Like A Sister", cursive;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 400;
 }
 
 .titulo-section {
@@ -1153,6 +1143,8 @@ footer .div-btts .link-btts {
 }
 
 #redes-sociais {
+  margin: 0;
+  padding: 0;
   grid-area: rs;
   display: flex;
   justify-content: center;

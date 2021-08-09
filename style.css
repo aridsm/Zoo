@@ -409,17 +409,19 @@ header #logo p {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   opacity: 0;
   transition: all 0.5s ease;
 }
 
 .slider .fundo1 {
   background-image: url("img/fundo1.jpg");
+
 }
 
 .slider .fundo2 {
   background-image: url("img/fundo2.jpg");
+
 }
 
 .slider .fundo3 {
@@ -546,7 +548,7 @@ header #logo p {
   color: #dff164;
   font-family: "Love Ya Like A Sister", cursive;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.3;
   text-align: right;
   border-radius: 16px;
@@ -555,6 +557,7 @@ header #logo p {
   justify-self: center;
   border: 2px solid #d7eb5a;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.18);
+  padding: 30px;
 }
 
 .card-atividade:hover {
@@ -572,10 +575,9 @@ header #logo p {
   font-weight: 400;
 }
 
+/***/
 .card-atividade img {
-  width: 250px;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+  width: 60px;
   position: relative;
   z-index: 1;
 }
@@ -1235,6 +1237,391 @@ footer .div-btts .link-btts {
   }
 }
 
+.js #visita {
+  display: none;
+  animation: show 0.4s forwards;
+}
+
+.js #menu-atividades {
+  display: none;
+  animation: show 0.4s forwards;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #8ba81c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader #pontos {
+  display: flex;
+  margin-top: 20px;
+}
+
+#loader #texto {
+  font-family: "Love Ya Like A Sister";
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #dff164;
+}
+
+#loader img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+#loader span {
+  background-color: #dff164;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+  display: block;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  text-align: center;
+}
+
+#loader span:first-of-type {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#loader span:nth-of-type(2) {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#loader span:nth-of-type(3) {
+  animation: loading 0.5s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes loading {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 8px;
+  }
+}
+
+#contato-body {
+  background-color: #f1ebe8;
+}
+
+#contato-body #section-contato {
+  margin-top: 100px;
+  background-image: url("img/secao_contato.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+#contato-body #section-contato .subtitulo-section,
+#contato-body #section-contato .titulo-section {
+  color: #2c311e;
+}
+
+#contato-body #section-contato .subtitulo-section::after {
+  background: #2c311e;
+}
+
+#contato-body #section-contato input:not(#enviar-mensagem) {
+  border-bottom: 2px solid #2c311e;
+}
+
+#contato-body #section-contato input::placeholder {
+  color: #2c311e96;
+}
+
+#contato-body #section-contato textarea {
+  color: #2c311e;
+  border: 2px solid #2c311e;
+}
+
+#contato-body #section-contato textarea::placeholder {
+  color: #2c311e96;
+}
+
+#redes-sociais-contato a {
+  padding: 20px;
+}
+
+#redes-sociais-contato {
+  padding: 10px 0;
+}
+
+#endereco-contato {
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #2c311e;
+  padding: 20px;
+  font-family: "Assistant";
+  color: #2c311e;
+  border-radius: 16px;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: 200px;
+}
+
+#endereco-contato span:nth-of-type(1)::before {
+  content: url("img/mapa_contato.svg");
+  margin-right: 10px;
+  position: relative;
+}
+
+#endereco-contato span:nth-of-type(2) {
+  margin-top: 0px;
+  border-bottom: 1px solid #2c311e;
+  padding-bottom: 15px;
+}
+
+#endereco-contato span:nth-of-type(3)::before {
+  content: url("img/tel_contato.svg");
+  margin-right: 10px;
+  position: relative;
+}
+
+#endereco-contato span:nth-of-type(3) {
+  border-bottom: 1px solid #2c311e;
+  padding-bottom: 15px;
+}
+
+#endereco-contato span:nth-of-type(4)::before {
+  content: url("img/envelope_contato.svg");
+  margin-right: 10px;
+  position: relative;
+}
+
+#endereco-contato span:nth-of-type(4) {
+  border-bottom: 1px solid #2c311e;
+  padding-bottom: 15px;
+}
+
+#endereco-contato span + span {
+  display: block;
+  margin-top: 15px;
+}
+
+/****************/
+
+#pag-n-existe h2 {
+  color: #a83225;
+  font-size: 32px;
+}
+
+#pag-n-existe .div-btts {
+  width: 220px;
+  margin: 0 auto;
+}
+
+#pag-n-existe {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/** pagina sobre **/
+#sobre-body {
+  background-color: #f1ebe8;
+}
+
+#sobre-body h3 {
+  font-family: "Love Ya Like a Sister";
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #2c311e;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#sobre-body section p {
+  grid-column: 1;
+  color: #000;
+  font-family: "Assistant";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#sobre-pagina {
+  text-align: center;
+}
+
+#sobre-body .subtitulo-section {
+  color: #2c311e;
+  width: auto;
+  display: inline-block;
+  margin-top: 150px;
+}
+
+#sobre-body .subtitulo-section::after {
+  background: #2c311e;
+}
+#sobre-body .titulo-section {
+  color: #2c311e;
+  margin-bottom: 0px;
+}
+
+.historia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  grid-gap: 30px;
+  z-index: 2;
+  width: 100%;
+}
+
+.historia div {
+  grid-column: 2;
+  grid-row: 1 / 5;
+  width: 400px;
+  justify-self: right;
+  margin-right: 20px;
+}
+
+.historia div img {
+  width: 100%;
+}
+
+.historia h3 {
+  text-align: left;
+}
+
+.objetivos {
+  background: url("img/secao.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.objetivos h3,
+.objetivos p {
+  grid-column: 2 !important;
+  justify-self: right !important;
+  text-align: right !important;
+  color: #2c311e !important;
+}
+
+.objetivos img {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  width: 500px;
+  justify-self: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  justify-content: space-between;
+  grid-gap: 30px;
+  margin-bottom: 100px;
+}
+
+.valores h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.valores p {
+  text-align: center !important;
+}
+
+.valores p:first-of-type {
+  grid-column: 1 !important;
+}
+
+.valores p:nth-of-type(2) {
+  grid-column: 2 !important;
+}
+
+.valores p:nth-of-type(3) {
+  grid-column: 3 !important;
+}
+
+.valores img:first-of-type {
+  grid-column: 1 !important;
+}
+
+.valores img:nth-of-type(2) {
+  grid-column: 2 !important;
+}
+
+.valores img:nth-of-type(3) {
+  grid-column: 3 !important;
+}
+
+.valores img {
+  grid-row: 2;
+  width: 70px;
+  justify-self: center;
+}
+
+#mapa_pag {
+  background-color: #f1ebe8;
+}
+
+#mapa_pag section .div-btts {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+#mapa_pag section {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#mapa_pag iframe {
+  border: 2px solid #2c311e !important;
+  border-radius: 16px;
+}
+
+#mapa_pag section {
+  text-align: center;
+}
+
+#mapa_pag .subtitulo-section {
+  color: #2c311e;
+  width: auto;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+#mapa_pag .subtitulo-section::after {
+  background: #2c311e;
+}
+#mapa_pag .titulo-section {
+  color: #2c311e;
+}
+
 @media all and (max-width: 950px) {
   #section-atividades {
     display: grid;
@@ -1312,6 +1699,100 @@ footer .div-btts .link-btts {
   #section-contato .div-btts {
     grid-column: 1;
   }
+
+  #sobre-body h3 {
+    grid-column: 1 / -1 !important;
+    text-align: center;
+  }
+
+  #sobre-body section p {
+    grid-column: 1 / -1 !important;
+  }
+
+  .historia {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .historia div {
+    grid-column: 1 / -1 !important;
+    grid-row: 6 !important;
+    width: 100% !important;
+    display: flex;
+    text-align: center !important;
+    justify-content: center;
+    justify-items: center !important;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .historia div img {
+    max-width: 400px;
+    margin: 20px;
+    display: block;
+  }
+
+  .objetivos {
+    grid-template-columns: 1fr;
+  }
+
+  .objetivos h3,
+  .objetivos p {
+    grid-column: 1 !important;
+    justify-self: center !important;
+    text-align: left !important;
+  }
+
+  .objetivos img {
+    justify-self: center;
+    max-width: 400px;
+    margin: 20px;
+    display: block;
+  }
+
+  .valores {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    grid-gap: 30px;
+    margin-bottom: 100px;
+  }
+
+  .valores p {
+    width: 320px;
+    justify-self: center;
+  }
+
+  .valores p:first-of-type {
+    grid-column: 1 !important;
+  }
+
+  .valores p:nth-of-type(2) {
+    grid-column: 1 !important;
+  }
+
+  .valores p:nth-of-type(3) {
+    grid-column: 1 !important;
+  }
+
+  .valores img:first-of-type {
+    grid-column: 1 !important;
+  }
+
+  .valores img:nth-of-type(2) {
+    grid-column: 1 !important;
+    grid-row: 4;
+  }
+
+  .valores img:nth-of-type(3) {
+    grid-column: 1 !important;
+    grid-row: 6;
+  }
+
+  .valores p + img {
+    margin-top: 50px;
+  }
 }
 
 @media all and (max-width: 900px) {
@@ -1328,6 +1809,15 @@ footer .div-btts .link-btts {
     margin-bottom: -50px;
     position: relative;
     z-index: 50;
+  }
+
+  #mapa_pag iframe {
+    width: 90%;
+  }
+
+  #mapa_pag section .div-btts {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   header #logo img {
@@ -1617,93 +2107,5 @@ footer .div-btts .link-btts {
 
   .slider .fundo3 {
     background-image: url("img/fundo-mobile3.jpg");
-  }
-}
-
-.js #visita {
-  display: none;
-  animation: show 0.4s forwards;
-}
-
-.js #menu-atividades {
-  display: none;
-  animation: show 0.4s forwards;
-}
-
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  background-color: #8ba81c;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#loader #pontos {
-  display: flex;
-  margin-top: 20px;
-}
-
-#loader #texto {
-  font-family: "Love Ya Like A Sister";
-  font-size: 18px;
-  letter-spacing: 1px;
-  color: #dff164;
-}
-
-#loader img {
-  width: 70px;
-  margin-bottom: 20px;
-}
-#loader span {
-  background-color: #dff164;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 10px;
-  display: block;
-  position: relative;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  text-align: center;
-}
-
-#loader span:first-of-type {
-  animation: loading 0.5s ease-out;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#loader span:nth-of-type(2) {
-  animation: loading 0.5s ease-out;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#loader span:nth-of-type(3) {
-  animation: loading 0.5s ease-out;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes loading {
-  from {
-    bottom: 0;
-  }
-
-  to {
-    bottom: 8px;
   }
 }

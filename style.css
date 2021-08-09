@@ -416,12 +416,10 @@ header #logo p {
 
 .slider .fundo1 {
   background-image: url("img/fundo1.jpg");
-
 }
 
 .slider .fundo2 {
   background-image: url("img/fundo2.jpg");
-
 }
 
 .slider .fundo3 {
@@ -1625,19 +1623,13 @@ footer .div-btts .link-btts {
 @media all and (max-width: 950px) {
   #section-atividades {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     background-size: 300px;
     background-position: 110% 1%;
   }
 
   .card-atividade {
-    font-size: 14px;
-    width: 320px;
-  }
-
-  .card-atividade img {
-    width: auto;
-    height: 100px;
+    width: 70%;
   }
 
   #section-eventos {

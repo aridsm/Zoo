@@ -1426,6 +1426,7 @@ footer .div-btts .link-btts {
 #pag-n-existe h2 {
   color: #a83225;
   font-size: 32px;
+  margin: 20px;
 }
 
 #pag-n-existe .div-btts {
@@ -1434,7 +1435,7 @@ footer .div-btts .link-btts {
 }
 
 #pag-n-existe {
-  margin: 100px 20px;
+  margin: 100px 0px;
 }
 
 /** pagina sobre **/

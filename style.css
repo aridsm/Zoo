@@ -367,11 +367,11 @@ header #logo p {
 }
 
 .menu-visita ul li:nth-of-type(2) a::before {
-  background-image: url("img/visita2.png");
+  background-image: url("img/visita3.png");
 }
 
 .menu-visita ul li:nth-of-type(3) a::before {
-  background-image: url("img/visita3.png");
+  background-image: url("img/visita2.png");
 }
 
 .menu-visita ul li:nth-of-type(4) a::before {
@@ -1630,7 +1630,7 @@ footer .div-btts .link-btts {
 
   .card-atividade {
     width: 70%;
-    font-size: 14px;
+
   }
 
   #section-eventos {
@@ -2009,12 +2009,12 @@ footer .div-btts .link-btts {
       "icons"
       "rs"
       "cr";
-    justify-content: center;
-    justify-items: center;
+    justify-content: center !important;
+    justify-items: center !important;
   }
 
   .item-footer {
-    text-align: center;
+    text-align: center !important;
   }
 
   footer .div-btts {
@@ -2100,5 +2100,11 @@ footer .div-btts .link-btts {
 
   .slider .fundo3 {
     background-image: url("img/fundo-mobile3.jpg");
+  }
+
+  .card-atividade {
+    width: 320px;
+    font-size: 16px;
+    padding: 15px;
   }
 }

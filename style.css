@@ -1426,6 +1426,7 @@ footer .div-btts .link-btts {
 #pag-n-existe h2 {
   color: #a83225;
   font-size: 32px;
+  margin: 20px
 }
 
 #pag-n-existe .div-btts {
@@ -1630,7 +1631,7 @@ footer .div-btts .link-btts {
 
   .card-atividade {
     width: 70%;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #section-eventos {
